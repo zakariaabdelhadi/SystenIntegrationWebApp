@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.studenten.studentenapp.service.StudentService;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -40,6 +41,18 @@ public class StudentController {
     public String saveStudent(@ModelAttribute("student") Student student){
 
         studentService.saveStudent(student);
+        return  "redirect:/students";
+
+
+    }
+
+
+
+    @GetMapping("/students/{id}")
+    public String deleteStudent(@PathVariable Long id){
+
+        studentService.deleteStudent(id);
+
         return  "redirect:/students";
 
 
