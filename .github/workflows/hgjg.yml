@@ -34,6 +34,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Build with Maven
+        run: mvn verify
+      - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
 
       - name: Set up Docker Buildx
