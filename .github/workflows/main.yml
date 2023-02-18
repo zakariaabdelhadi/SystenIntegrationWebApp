@@ -12,9 +12,10 @@ jobs:
         with:
           java-version: '12'
           distribution: 'adopt'
-          cache: maven   
+          cache: maven 
+          working-directory: ./SystenIntegrationWebApp
       - name: Build the Docker image and Push
-        working-directory: .     
+        working-directory: ./SystenIntegrationWebApp     
         run: |
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
           docker build . -f ./Dockerfile --tag docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:latest
