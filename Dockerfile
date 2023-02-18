@@ -22,7 +22,6 @@ COPY src /tmp/src/
 
 WORKDIR /tmp/
 
-RUN mvn package
 
 #pull base image
 
