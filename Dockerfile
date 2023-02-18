@@ -12,6 +12,6 @@ WORKDIR /applications
 # Maven
 WORKDIR /applications
 
-ADD  target/StudentenApp-0.0.1-SNAPSHOT.jar /applications/studenten-app-image.jar
+COPY  target/StudentenApp-0.0.1-SNAPSHOT.jar /applications/studenten-app-image.jar
 ENTRYPOINT ["java","-jar", "studenten-app-image.jar"]
 EXPOSE 8080
