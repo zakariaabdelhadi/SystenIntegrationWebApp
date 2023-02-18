@@ -14,10 +14,10 @@ jobs:
           distribution: 'adopt'
           cache: maven 
       - name: Build with Maven 
-        working-directory: ../../    
+        working-directory: ../../SystenIntegrationWebApp    
         run: mvn -B package --file pom.xml   
       - name: Build the Docker image and Push
-        working-directory: ../../    
+        working-directory: ../../SystenIntegrationWebApp    
         run: |
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
           docker build . -f ./Dockerfile --tag docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:latest
