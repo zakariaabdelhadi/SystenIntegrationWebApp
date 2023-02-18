@@ -10,6 +10,6 @@ FROM openjdk:17
 # Maven
 
 
-COPY  StudentenApp-0.0.1-SNAPSHOT.jar studenten-app-image.jar
+COPY  /home/runner/work/SystenIntegrationWebApp/SystenIntegrationWebApp/target/StudentenApp-0.0.1-SNAPSHOT.jar studenten-app-image.jar
 CMD  ["java","-jar", "studenten-app-image.jar"]
 EXPOSE 8080
