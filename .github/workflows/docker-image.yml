@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag seconp-app-image-repo:latest
+      run: docker build  -t seconp-app-image-repo -f Dockerfile .
