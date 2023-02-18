@@ -1,6 +1,6 @@
 #base  docker image openjdk:17
-#FROM ubuntu:20.04
-FROM openjdk:17
+FROM ubuntu:20.04
+#FROM openjdk:17
 MAINTAINER docker@thb.de
 RUN apt-get update
 RUN apt-get install openjdk-17-jre-headless -y
