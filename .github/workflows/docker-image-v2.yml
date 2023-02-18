@@ -16,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag zakariaabdelalizakaria/studentenrepo:latest
+      run: docker build . --file Dockerfile --tag zakariaabdelalizakaria/studenten-app-repo:latest
     - name: Push the Docker image
-      run: docker login -u zakariaabdelalizakaria -p ${{ secrets.DOCKER_HUB_TOKEN }} && docker push zakariaabdelalizakaria/studentenrepo:latest
+      run: docker login -u zakariaabdelalizakaria -p ${{ secrets.DOCKER_HUB_TOKEN }} && docker push zakariaabdelalizakaria/studenten-app-repo:latest
