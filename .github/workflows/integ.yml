@@ -31,9 +31,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Build with Maven
+      - name: Build with Maven verify
         run: mvn verify
-      - name: Build with Maven
+      - name: Build with Maven package
         run: mvn --batch-mode --update-snapshots package
       - name: Login to GHCR
         uses: docker/login-action@v1
