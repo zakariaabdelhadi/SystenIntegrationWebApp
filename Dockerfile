@@ -13,5 +13,5 @@ WORKDIR /applications
 WORKDIR /applications
 
 COPY  target/StudentenApp-0.0.1-SNAPSHOT.jar /applications/studenten-app-image.jar
-ENTRYPOINT java -jar /studenten-app-image.jar
+ENTRYPOINT ["java","-jar", "sample-application.jar"]
 EXPOSE 8080
