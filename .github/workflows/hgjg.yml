@@ -14,7 +14,7 @@ jobs:
     
     steps:
       - name: Check out
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - name: Docker meta
         id: docker_meta
@@ -27,11 +27,19 @@ jobs:
           
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
+        
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
       - name: Build with Maven
-        run: mvn -B package --file ./pom.xml
+        run: mvn --batch-mode --update-snapshots package
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
+        with:
+          version: v0.7.0
         
       - name: Login to GHCR
         uses: docker/login-action@v1
