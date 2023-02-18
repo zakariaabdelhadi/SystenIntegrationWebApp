@@ -15,15 +15,6 @@ jobs:
     steps:
       - name: Check out
         uses: actions/checkout@v3
-        
-      - name: Docker meta
-        id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
-        with:
-          images: docker.io/zakariaabdelalizakaria/studenten-app-repo
-          tag-sha: true
-          tag-edge: false
-          tag-latest: true
           
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
