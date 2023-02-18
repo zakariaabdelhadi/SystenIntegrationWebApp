@@ -9,3 +9,5 @@ RUN apt-get install openjdk-17-jre-headless -y
 ADD ./target/StudentenApp-0.0.1-SNAPSHOT.jar /studenten-app-image.jar
 ENTRYPOINT java -jar /studenten-app-image.jar
 EXPOSE 8080
+#access token for github
+#dckr_pat_ObCpb9dnIO-tZxO2j0N6OQl0Ztk
