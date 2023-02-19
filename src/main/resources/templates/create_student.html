@@ -27,14 +27,14 @@
     </ul>
   </div>
 </nav>
-<br>
-<br>
+<div class="bg-image p-5  shadow-1-strong  mb-5 "  style="background-image: url('https://jobs.b-ite.com/api/v1/assets/0d30fb89-322e-494b-98df-95eea33759e7.jpeg');"
+>
 <div class = "container">
   <div class = "row">
-    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card" style="background-color: white;opacity: 0.8;">
       <h1 class = "text-center"> Neuen Studenten anlegen </h1>
       <div class = "card-body">
-        <form th:action="@{/saveStudent}" th:object = "${student}" method="POST">
+        <form th:action="@{/saveStudent}" th:object = "${student}" method="POST" >
           <div class ="form-group">
             <label> Students Name </label>
             <input
@@ -79,6 +79,6 @@
     </div>
   </div>
 </div>
-
+</div>
 </body>
 </html>
