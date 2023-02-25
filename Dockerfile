@@ -5,10 +5,8 @@ MAINTAINER docker@thb.de
 RUN apt-get update
 RUN apt-get install openjdk-17-jre-headless -y
 # Gradle
-#
 #ADD ./build/libs/<Achtung Namen ihres Jars hier eintragen!>.jar /service.jar
 # Maven
-#WORKDIR /applications
 ADD ./target/studenten-app-snapschot.jar /service.jar
 ENTRYPOINT java -jar /service.jar
 EXPOSE 8080
